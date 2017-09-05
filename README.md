@@ -17,4 +17,14 @@ ng new project-name
 * 生命钩子
 * pipe
 
+## 脚手架
+1. 如何引入样式文件or字体文件
+````styles.scss
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
+````
+> [为何使用~导入node_modules](https://doc.webpack-china.org/loaders/sass-loader)
+
 # 学习链接
+[font-awesome](http://fontawesome.io/icons/)
+[bootstrap](http://v3.bootcss.com/css/)
