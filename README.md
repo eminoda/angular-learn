@@ -1,19 +1,7 @@
 # 这是一个angular的练手项目
 
 # 感谢
-参考大漠穷秋的开源项目，本项目只是作为个人的一个practice。
-
-````
-ng new project-name
-````
-
-## 2. component-组件
-* 组件基本概念
-    组件定义，模板（event bind，data bind），anminate，service inject
-
-* 组件通讯
-* 生命钩子
-* pipe
+参考[大漠穷秋的开源项目](https://damoqiongqiu.github.io/)，本项目只是作为个人的一个practice。
 
 # 解决&没解决的问题
 多数基础问题都会再此处有个很好的答案。同时也是自己玩的时候遇到的，如果有帮助**希望能在右上角点个star**
@@ -47,8 +35,8 @@ ng new project-name
 1. If 'p-tabPanel' is an Angular component, then verify that it is part of this module.
 2. If 'p-tabPanel' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.
 ````
-
-
+6. Error: Type TestTemplateComponent is part of the declarations of 2 modules: AppModule and TestComponentModule! Please consider moving TestTemplateComponent to a higher module that imports AppModule and TestComponentModule
+> 重复导入组件
 # 学习链接
 [font-awesome](http://fontawesome.io/icons/)
 

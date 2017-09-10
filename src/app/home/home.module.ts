@@ -1,5 +1,3 @@
-import { TestFormComponent } from './../test-form/test-form.component';
-import { TestComponentComponent } from './../test-component/test-component.component';
 import { SharedPrimengModule } from './../shared-primeng/shared-primeng.module';
 import { homeRoutes } from './home.routes';
 import { RouterModule } from '@angular/router';
@@ -14,9 +12,7 @@ import { CommonModule } from '@angular/common';
     RouterModule.forChild(homeRoutes)
   ],
   declarations: [
-    HomeComponent,
-    TestComponentComponent,
-    TestFormComponent
+    HomeComponent
   ]
 })
 export class HomeModule { }

@@ -1,14 +1,18 @@
 import { TestFormComponent } from './../test-form/test-form.component';
-import { TestComponentComponent } from './../test-component/test-component.component';
 import { HomeComponent } from './home.component';
 import { Routes } from '@angular/router';
 export const homeRoutes: Routes = [{
     path: '',
-    component: HomeComponent
-}, {
-    path: 'testComponent',
-    component: TestComponentComponent
-}, {
-    path: 'testForm',
-    component: TestFormComponent
+    component: HomeComponent,
+    children: [{
+        path: '',
+        redirectTo: 'component',
+        pathMatch: 'full'
+    }, {
+        path: 'component',
+        loadChildren: '../test-component/test-component.module#TestComponentModule'
+    }, {
+        path: 'form',
+        loadChildren: '../test-form/test-form.module#TestFormModule'
+    }]
 }];
