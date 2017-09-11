@@ -12,4 +12,7 @@ export class TemplateDirvenFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  public onSubmit() {
+    console.log('submit');
+  }
 }

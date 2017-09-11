@@ -40,6 +40,16 @@
 
 7. Can't bind to 'routerLink' since it isn't a known property of 'a'. ("
 > 需导入 RouterModule
+
+8. Can't bind to 'ngModel' since it isn't a known property of 'input'
+
+9. Cannot assign to a reference or variable!
+> 在form中模板引用变量别和ngModule一样
+[https://github.com/angular/angular/issues/9363](https://github.com/angular/angular/issues/9363)
+[https://github.com/oferh/ng2-completer/issues/63](https://github.com/oferh/ng2-completer/issues/63)
+
+10. No provider for NgControl
+> 导入ReactiveFormsModule
 # 学习链接
 [font-awesome](http://fontawesome.io/icons/)
 

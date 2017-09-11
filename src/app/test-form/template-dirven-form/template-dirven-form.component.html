@@ -1,3 +1,33 @@
-<p>
-  template-dirven-form works!
-</p>
+<form class="form-horizontal" (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <div class="form-group" [ngClass]="{'has-error': !validator.valid&&validator.dirty}">
+    <label for="username" class="col-sm-2 control-label">用户名</label>
+    <div class="col-sm-10">
+      <input #validator="ngModel" [(ngModel)]="username" required minlength="2" name="username" type="text" class="form-control"
+        id="username" placeholder="用户名">
+    </div>
+    <div class="col-sm-offset-2 col-sm-10">
+      <p>当前输入=>{{username}}</p>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="password" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="password" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-success" userForm.form.valid>Sign in</button>
+      <p>当前form状态=>{{userForm.form.valid}}</p>
+    </div>
+  </div>
+</form>
+<div>使用 ngModel 进行双向数据绑定</div>
+<div>NgForm指令的引用，它代表该表单的整体</div>
+<div>通过 ngModel 跟踪修改状态与有效性验证。需要用模板引用变量引用整个标签，获取其中className属性
+  <ol>
+    <li>ng-touched//被访问过</li>
+    <li>ng-dirty//值变化了</li>
+    <li>ng-valid</li>
+  </ol>
+</div>
