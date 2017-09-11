@@ -37,6 +37,9 @@
 ````
 6. Error: Type TestTemplateComponent is part of the declarations of 2 modules: AppModule and TestComponentModule! Please consider moving TestTemplateComponent to a higher module that imports AppModule and TestComponentModule
 > 重复导入组件
+
+7. Can't bind to 'routerLink' since it isn't a known property of 'a'. ("
+> 需导入 RouterModule
 # 学习链接
 [font-awesome](http://fontawesome.io/icons/)
 

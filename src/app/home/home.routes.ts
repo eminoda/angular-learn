@@ -6,7 +6,7 @@ export const homeRoutes: Routes = [{
     component: HomeComponent,
     children: [{
         path: '',
-        redirectTo: 'component',
+        redirectTo: 'form',
         pathMatch: 'full'
     }, {
         path: 'component',

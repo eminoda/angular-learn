@@ -1,0 +1,8 @@
+<!-- <a routerLink="/home/component/template" routerLinkActive="active" class="list-group-item">模板Template</a>
+<a routerLink="/home/component/life" routerLinkActive="active" class="list-group-item">生命周期LifeCycle</a>
+<a routerLink="/home/component/communication" routerLinkActive="active" class="list-group-item">组件通信Comm.</a> -->
+
+<a *ngFor="let nav of navs" 
+    routerLinkActive="active" 
+    [routerLink]="nav.url"
+    class="list-group-item">{{nav.name}}</a>

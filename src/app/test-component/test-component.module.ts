@@ -1,3 +1,4 @@
+import { SharedCommonModule } from './../shared-common/shared-common.module';
 import { TestComponentComponent } from './test-component.component';
 import { TestCommunicationComponent } from './test-communication/test-communication.component';
 import { TestLifeComponent } from './test-life/test-life.component';
@@ -12,6 +13,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     CommonModule,
     SharedPrimengModule,
+    SharedCommonModule,
     RouterModule.forChild(testComponentRoutes)
   ],
   declarations: [
