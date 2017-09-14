@@ -1,3 +1,4 @@
+import { My2ValidatorDirective } from './validator-form/myValidator2';
 import { SharedCommonModule } from './../shared-common/shared-common.module';
 import { testFormRoutes } from './test-form.routes';
 import { RouterModule } from '@angular/router';
@@ -24,7 +25,8 @@ import { BasicFormComponent } from './basic-form/basic-form.component';
     ReactiveFormComponent,
     DynamicFormComponent,
     ValidatorFormComponent,
-    BasicFormComponent
+    BasicFormComponent,
+    My2ValidatorDirective
   ]
 })
 export class TestFormModule { }
