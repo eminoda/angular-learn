@@ -11,7 +11,7 @@ export const testFormRoutes: Routes = [{
     component: TestFormComponent,
     children: [{
         path: '',
-        redirectTo: 'validator',
+        redirectTo: 'reactive',
         pathMatch: 'full'
     }, {
         path: 'basic',

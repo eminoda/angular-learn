@@ -1,4 +1,4 @@
-<div class="alert alert-success" role="alert">模板表单</div>
+<div class="alert alert-success" role="alert">模板表单验证</div>
 <p>通过模板变量，体现验证</p>
 
 <form class="form-horizontal">
@@ -36,7 +36,7 @@
       <button class="btn btn-info" (click)="showReactiveRef()">ReactiveRef</button>
       <div>FormGroup.value:{{userForm.value.username1}}</div>
       <div>FormGroup.invalid:{{userForm.invalid}}</div>
-      <div>响应表单自定义校验：{{userForm.controls.username1.errors&&userForm.controls.username1.errors.my.value}}</div>
+      <div>响应表单自定义校验：{{userForm.controls.username1.errors&&userForm.controls.username1.errors.my&&userForm.controls.username1.errors.my.value}}</div>
     </div>
   </div>
 </form>

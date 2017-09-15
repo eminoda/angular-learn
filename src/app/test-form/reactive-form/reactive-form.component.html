@@ -1,3 +1,42 @@
-<p>
-  reactive-form works!
-</p>
+<panel-content [name]="'响应式表单'">
+  <ol>
+    <li>可以在组件中创建表单控件的对象树,并把它们绑定到组件模板中的原生表单控件元素上</li>
+    <li>可以在组件类中直接创建和维护表单控件对象。把表单模型值的变化推送到表单控件中，并把变化后的值拉取回来。 组件可以监听表单控件状态的变化，并对此做出响应。</li>
+    <li>直接使用表单控件对象的优点之一是值和有效性状态的更新总是同步的，并且在你的控制之下</li>
+  </ol>
+</panel-content>
+<panel-content [name]="'与模板驱动表单的不同'">
+  <ol>
+    <li>模板Form通过html标签组成模板，通过ngModel等指令把它们绑定到组件中数据模型的属性上。我们不用自己推送和拉取数据。Angular使用ngModel来替你管理它们。 当用户做出修改时，Angular会据此更新可变的数据模型。</li>
+    <li>
+      响应式表单是同步的。
+      在代码中创建整个表单控件树。 我们可以立即更新一个值或者深入到表单中的任意节点，因为所有的控件都始终是可用的。
+    </li>
+    <li>
+      模板驱动表单会委托指令来创建它们的表单控件。 为了消除“检查完后又变化了”的错误，这些指令需要消耗一个以上的变更检测周期来构建整个控件树。
+    </li>
+  </ol>
+</panel-content>
+<div class="alert alert-success" role="alert">FormGroup&FormControl</div>
+<form [formGroup]="form1" class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">name</label>
+    <div class="col-sm-10">
+      <input formControlName="name" type="text" class="form-control" id="name" placeholder="name">
+    </div>
+  </div>
+  <div class="form-group" formGroupName="childName">
+    <label for="inputEmail3" class="col-sm-2 control-label">childname</label>
+    <div class="col-sm-10">
+      <input formControlName="age" type="text" class="form-control" id="age" placeholder="age">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Sign in</button>
+    </div>
+  </div>
+  <p>Form value: {{ form1.value | json }}</p>
+  <p>Form status: {{ form1.status | json }}</p>
+  <button class="btn btn-info" (click)="showFormData(form1)">显示form</button>
+</form>
